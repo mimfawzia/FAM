@@ -2,17 +2,17 @@
 
 @layer base {
   :root {
-    --bg-primary: #071525;
-    --bg-secondary: #102238;
-    --accent-teal: #00d6c5;
-    --text-primary: #ffffff;
-    --text-secondary: #b7c5d3;
+    --bg-primary: #ffffff;
+    --bg-secondary: #f8fafc;
+    --accent-teal: #0d9488;
+    --text-primary: #071525;
+    --text-secondary: #475569;
   }
 
   html {
     font-family: "DM Sans", "Noto Sans Bengali", system-ui, -apple-system, sans-serif;
-    background-color: #071525;
-    color: #ffffff;
+    background-color: #ffffff;
+    color: #071525;
     scroll-behavior: smooth;
   }
 
@@ -29,12 +29,13 @@
   }
 }
 
-/* Subtle glass surface utility */
+/* Light glass surface utility */
 .glass-surface {
-  background: linear-gradient(145deg, rgba(16, 34, 56, 0.78), rgba(11, 26, 45, 0.68));
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(7, 21, 37, 0.08);
+  box-shadow: 0 4px 20px -6px rgba(7, 21, 37, 0.06);
 }
 
 .glass-surface-hover {
@@ -45,8 +46,8 @@
 
 .glass-surface-hover:hover {
   transform: translateY(-3px);
-  border-color: rgba(0, 214, 197, 0.32);
-  box-shadow: 0 18px 40px -18px rgba(0, 214, 197, 0.16);
+  border-color: rgba(13, 148, 136, 0.38);
+  box-shadow: 0 18px 36px -14px rgba(13, 148, 136, 0.14);
 }
 
 @media (prefers-reduced-motion: reduce) {

@@ -42,18 +42,18 @@ export function PortfolioSection({onInquireProject}: PortfolioSectionProps) {
   return (
     <section
       id="portfolio"
-      className="border-b border-white/[0.06] bg-[#102238]/25 py-16 sm:py-24"
+      className="border-b border-slate-200/80 bg-slate-50/75 py-16 sm:py-24"
     >
       <div className="mx-auto max-w-[1200px] px-5 sm:px-8">
         <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
           <div className="max-w-2xl">
-            <p className="text-sm font-medium text-[#00D6C5]">
+            <p className="text-sm font-medium text-[#0F766E]">
               Selected Concept Showcase · Self-Initiated Work
             </p>
-            <h2 className="mt-2 font-display text-3xl sm:text-4xl font-bold tracking-tight text-white [text-wrap:balance]">
+            <h2 className="mt-2 font-display text-3xl sm:text-4xl font-bold tracking-tight text-[#071525] [text-wrap:balance]">
               Portfolio &amp; Concept Projects
             </h2>
-            <p className="mt-3 text-sm sm:text-base leading-relaxed text-[#B7C5D3]">
+            <p className="mt-3 text-sm sm:text-base leading-relaxed text-slate-600">
               Illustrative concept projects demonstrating visual craft, campaign structuring, and
               SEO planning. Each piece is self-initiated rather than fabricated client work.
             </p>
@@ -63,7 +63,7 @@ export function PortfolioSection({onInquireProject}: PortfolioSectionProps) {
           <div
             role="tablist"
             aria-label="Filter portfolio projects by category"
-            className="flex flex-wrap items-center gap-1.5 rounded-xl border border-white/[0.08] bg-[#071525]/80 p-1.5"
+            className="flex flex-wrap items-center gap-1.5 rounded-xl border border-slate-200 bg-white p-1.5 shadow-2xs"
           >
             {PROJECT_FILTERS.map((category) => {
               const isSelected = selectedCategory === category;
@@ -74,10 +74,10 @@ export function PortfolioSection({onInquireProject}: PortfolioSectionProps) {
                   type="button"
                   aria-selected={isSelected}
                   onClick={() => setSelectedCategory(category)}
-                  className={`rounded-lg px-3.5 py-2 text-xs sm:text-sm font-medium whitespace-nowrap shrink-0 transition-colors duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#00D6C5] ${
+                  className={`rounded-lg px-3.5 py-2 text-xs sm:text-sm font-medium whitespace-nowrap shrink-0 transition-colors duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0D9488] ${
                     isSelected
-                      ? 'bg-[#00D6C5] text-[#071525] font-semibold'
-                      : 'text-[#B7C5D3] hover:text-white'
+                      ? 'bg-[#0D9488] text-white font-semibold'
+                      : 'text-slate-600 hover:text-[#071525]'
                   }`}
                 >
                   {category}
@@ -95,11 +95,11 @@ export function PortfolioSection({onInquireProject}: PortfolioSectionProps) {
               className="glass-surface glass-surface-hover group flex flex-col overflow-hidden rounded-2xl"
             >
               {/* Project Visual Frame with Fallback Container */}
-              <div className="relative aspect-[4/3] w-full overflow-hidden bg-[#071525]">
+              <div className="relative aspect-[4/3] w-full overflow-hidden bg-slate-100">
                 {failedImages[project.id] ? (
-                  <div className="flex h-full w-full flex-col items-center justify-center bg-gradient-to-br from-[#102238] to-[#071525] p-6 text-center">
-                    <Layers className="h-8 w-8 text-[#00D6C5]/70" aria-hidden="true" />
-                    <p className="mt-3 font-display text-sm font-semibold text-white">
+                  <div className="flex h-full w-full flex-col items-center justify-center bg-gradient-to-br from-slate-100 to-slate-200 p-6 text-center">
+                    <Layers className="h-8 w-8 text-[#0F766E]" aria-hidden="true" />
+                    <p className="mt-3 font-display text-sm font-semibold text-[#071525]">
                       {project.title}
                     </p>
                   </div>
@@ -118,28 +118,28 @@ export function PortfolioSection({onInquireProject}: PortfolioSectionProps) {
               <div className="flex flex-1 flex-col justify-between p-6">
                 <div>
                   {/* Unboxed Typographic Metadata */}
-                  <div className="flex items-center gap-2 text-xs font-medium text-[#00D6C5]">
+                  <div className="flex items-center gap-2 text-xs font-medium text-[#0F766E]">
                     <span>{project.category}</span>
-                    <span className="text-white/30" aria-hidden="true">
+                    <span className="text-slate-300" aria-hidden="true">
                       ·
                     </span>
-                    <span className="text-[#B7C5D3]">Concept Project</span>
+                    <span className="text-slate-500">Concept Project</span>
                   </div>
 
-                  <h3 className="mt-2 font-display text-xl font-semibold text-white">
+                  <h3 className="mt-2 font-display text-xl font-semibold text-[#071525]">
                     {project.title}
                   </h3>
 
-                  <p className="mt-2.5 text-sm leading-relaxed text-[#B7C5D3]">
+                  <p className="mt-2.5 text-sm leading-relaxed text-slate-600">
                     {project.shortDescription}
                   </p>
                 </div>
 
-                <div className="mt-6 pt-4 border-t border-white/[0.08]">
+                <div className="mt-6 border-t border-slate-200/80 pt-4">
                   <button
                     type="button"
                     onClick={() => setActiveProject(project)}
-                    className="inline-flex min-h-[40px] w-full items-center justify-center gap-2 rounded-xl border border-white/15 bg-[#071525]/60 px-4 py-2 text-sm font-medium text-white whitespace-nowrap transition-colors duration-150 hover:border-[#00D6C5]/50 hover:bg-[#00D6C5]/10 hover:text-[#00D6C5] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#00D6C5]"
+                    className="inline-flex min-h-[40px] w-full items-center justify-center gap-2 rounded-xl border border-slate-200 bg-slate-50 px-4 py-2 text-sm font-medium text-[#071525] whitespace-nowrap transition-colors duration-150 hover:border-[#0D9488]/50 hover:bg-teal-50 hover:text-[#0F766E] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0D9488]"
                   >
                     View Project
                     <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
@@ -157,25 +157,25 @@ export function PortfolioSection({onInquireProject}: PortfolioSectionProps) {
           role="dialog"
           aria-modal="true"
           aria-labelledby="modal-project-title"
-          className="fixed inset-0 z-50 flex items-center justify-center bg-[#040c16]/80 p-4 backdrop-blur-sm"
+          className="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/60 p-4 backdrop-blur-xs"
           onClick={() => setActiveProject(null)}
         >
           <div
-            className="relative max-h-[90vh] w-full max-w-2xl overflow-y-auto rounded-2xl border border-white/15 bg-[#0b1c30] p-6 sm:p-8 shadow-2xl"
+            className="relative max-h-[90vh] w-full max-w-2xl overflow-y-auto rounded-2xl border border-slate-200 bg-white p-6 sm:p-8 shadow-2xl"
             onClick={(e) => e.stopPropagation()}
           >
             <div className="flex items-start justify-between gap-4">
               <div>
-                <p className="text-xs font-medium text-[#00D6C5]">
+                <p className="text-xs font-medium text-[#0F766E]">
                   {activeProject.category}
-                  <span className="mx-2 text-white/30" aria-hidden="true">
+                  <span className="mx-2 text-slate-300" aria-hidden="true">
                     ·
                   </span>
-                  <span className="text-[#B7C5D3]">Self-Initiated Concept</span>
+                  <span className="text-slate-500">Self-Initiated Concept</span>
                 </p>
                 <h3
                   id="modal-project-title"
-                  className="mt-1.5 font-display text-2xl font-bold text-white"
+                  className="mt-1.5 font-display text-2xl font-bold text-[#071525]"
                 >
                   {activeProject.title}
                 </h3>
@@ -185,15 +185,15 @@ export function PortfolioSection({onInquireProject}: PortfolioSectionProps) {
                 type="button"
                 onClick={() => setActiveProject(null)}
                 aria-label="Close project details"
-                className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-white/10 bg-[#102238] text-[#B7C5D3] transition-colors hover:border-[#00D6C5]/50 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#00D6C5]"
+                className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-slate-200 bg-slate-50 text-slate-600 transition-colors hover:border-[#0D9488]/50 hover:text-[#071525] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0D9488]"
               >
                 <X className="h-5 w-5" />
               </button>
             </div>
 
-            <div className="mt-5 aspect-[4/3] w-full overflow-hidden rounded-xl border border-white/10 bg-[#071525]">
+            <div className="mt-5 aspect-[4/3] w-full overflow-hidden rounded-xl border border-slate-200 bg-slate-100">
               {failedImages[activeProject.id] ? (
-                <div className="flex h-full w-full items-center justify-center text-sm text-[#B7C5D3]">
+                <div className="flex h-full w-full items-center justify-center text-sm text-slate-500">
                   {activeProject.title}
                 </div>
               ) : (
@@ -206,18 +206,18 @@ export function PortfolioSection({onInquireProject}: PortfolioSectionProps) {
               )}
             </div>
 
-            <p className="mt-5 text-sm leading-relaxed text-[#B7C5D3]">
+            <p className="mt-5 text-sm leading-relaxed text-slate-600">
               {activeProject.shortDescription}
             </p>
 
-            <p className="mt-3 text-xs italic text-[#B7C5D3]/80">{activeProject.conceptNote}</p>
+            <p className="mt-3 text-xs italic text-slate-500">{activeProject.conceptNote}</p>
 
-            <div className="mt-6 grid grid-cols-1 gap-6 border-t border-white/[0.08] pt-6 sm:grid-cols-2">
+            <div className="mt-6 grid grid-cols-1 gap-6 border-t border-slate-200 pt-6 sm:grid-cols-2">
               <div>
-                <h4 className="font-display text-sm font-semibold text-white">
+                <h4 className="font-display text-sm font-semibold text-[#071525]">
                   Concept Objectives
                 </h4>
-                <ul className="mt-2.5 space-y-2 text-sm text-[#B7C5D3]">
+                <ul className="mt-2.5 space-y-2 text-sm text-slate-600">
                   {activeProject.objectives.map((item) => (
                     <li key={item} className="leading-relaxed">
                       • {item}
@@ -226,10 +226,10 @@ export function PortfolioSection({onInquireProject}: PortfolioSectionProps) {
                 </ul>
               </div>
               <div>
-                <h4 className="font-display text-sm font-semibold text-white">
+                <h4 className="font-display text-sm font-semibold text-[#071525]">
                   Included Deliverables
                 </h4>
-                <ul className="mt-2.5 space-y-2 text-sm text-[#B7C5D3]">
+                <ul className="mt-2.5 space-y-2 text-sm text-slate-600">
                   {activeProject.deliverables.map((item) => (
                     <li key={item} className="leading-relaxed">
                       • {item}
@@ -239,11 +239,11 @@ export function PortfolioSection({onInquireProject}: PortfolioSectionProps) {
               </div>
             </div>
 
-            <div className="mt-7 flex flex-wrap items-center justify-end gap-3 border-t border-white/[0.08] pt-5">
+            <div className="mt-7 flex flex-wrap items-center justify-end gap-3 border-t border-slate-200 pt-5">
               <button
                 type="button"
                 onClick={() => setActiveProject(null)}
-                className="inline-flex min-h-[42px] items-center justify-center rounded-xl border border-white/15 px-4 py-2 text-sm font-medium text-[#B7C5D3] transition-colors hover:text-white"
+                className="inline-flex min-h-[42px] items-center justify-center rounded-xl border border-slate-200 px-4 py-2 text-sm font-medium text-slate-600 transition-colors hover:text-[#071525]"
               >
                 Close
               </button>
@@ -254,7 +254,7 @@ export function PortfolioSection({onInquireProject}: PortfolioSectionProps) {
                   setActiveProject(null);
                   onInquireProject(`Inquiry regarding ${title}`);
                 }}
-                className="inline-flex min-h-[42px] items-center justify-center rounded-xl bg-[#00D6C5] px-5 py-2 text-sm font-semibold text-[#071525] transition-colors hover:bg-[#1de6d6]"
+                className="inline-flex min-h-[42px] items-center justify-center rounded-xl bg-[#0D9488] px-5 py-2 text-sm font-semibold text-white transition-colors hover:bg-[#0F766E]"
               >
                 Request Similar Work
               </button>

@@ -77,16 +77,16 @@ export function HeroSection() {
   return (
     <section
       id="home"
-      className="relative overflow-hidden border-b border-white/[0.06] pt-10 pb-14 sm:pt-14 sm:pb-20"
+      className="relative overflow-hidden border-b border-slate-200/80 bg-gradient-to-b from-white via-white to-slate-50/70 pt-10 pb-14 sm:pt-14 sm:pb-20"
     >
-      {/* Ambient Deep Navy & Teal Radial Glow */}
+      {/* Subtle Light Ambient Glow */}
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute -top-32 right-0 h-[480px] w-[480px] rounded-full bg-[#00D6C5]/[0.07] blur-[120px]"
+        className="pointer-events-none absolute -top-32 right-0 h-[440px] w-[440px] rounded-full bg-[#00D6C5]/[0.08] blur-[120px]"
       />
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute bottom-0 -left-32 h-[380px] w-[380px] rounded-full bg-[#102238]/90 blur-[100px]"
+        className="pointer-events-none absolute bottom-0 -left-32 h-[360px] w-[360px] rounded-full bg-slate-200/50 blur-[100px]"
       />
 
       <div className="relative mx-auto max-w-[1200px] px-5 sm:px-8">
@@ -94,26 +94,26 @@ export function HeroSection() {
         <div className="grid grid-cols-1 items-stretch gap-10 lg:grid-cols-12 lg:gap-12">
           {/* Left Column: Core Typographic Hierarchy & CTAs */}
           <div className="flex flex-col justify-center lg:col-span-7">
-            <p className="text-sm font-medium tracking-wide text-[#00D6C5]">
+            <p className="text-sm font-medium tracking-wide text-[#0F766E]">
               {PERSONAL_INFO.title}
-              <span className="mx-2 text-white/30" aria-hidden="true">
+              <span className="mx-2 text-slate-300" aria-hidden="true">
                 ·
               </span>
-              <span className="text-[#B7C5D3]">{PERSONAL_INFO.location}</span>
+              <span className="text-slate-600">{PERSONAL_INFO.location}</span>
             </p>
 
-            <h1 className="mt-4 font-display text-[clamp(2.25rem,4.2vw,3.6rem)] font-bold leading-[1.1] tracking-tight text-white [text-wrap:balance]">
+            <h1 className="mt-4 font-display text-[clamp(2.25rem,4.2vw,3.6rem)] font-bold leading-[1.1] tracking-tight text-[#071525] [text-wrap:balance]">
               Hello, I&apos;m{' '}
-              <span className="bg-gradient-to-r from-white via-white to-[#00D6C5] bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-[#071525] via-[#0F766E] to-[#0D9488] bg-clip-text text-transparent">
                 {PERSONAL_INFO.name}
               </span>
             </h1>
 
-            <p className="mt-4 font-display text-xl sm:text-2xl font-medium leading-snug text-[#E2ECF5] [text-wrap:balance] max-w-2xl">
+            <p className="mt-4 font-display text-xl sm:text-2xl font-medium leading-snug text-slate-800 [text-wrap:balance] max-w-2xl">
               {PERSONAL_INFO.headline}
             </p>
 
-            <p className="mt-5 max-w-xl text-base leading-relaxed text-[#B7C5D3]">
+            <p className="mt-5 max-w-xl text-base leading-relaxed text-slate-600">
               {PERSONAL_INFO.intro}
             </p>
 
@@ -121,7 +121,7 @@ export function HeroSection() {
             <div className="mt-8 flex flex-wrap items-center gap-4">
               <a
                 href="#contact"
-                className="inline-flex min-h-[46px] items-center justify-center gap-2 rounded-xl bg-[#00D6C5] px-6 py-3 text-sm font-semibold text-[#071525] whitespace-nowrap shrink-0 transition-all duration-150 hover:bg-[#1de6d6] hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#00D6C5] focus-visible:ring-offset-2 focus-visible:ring-offset-[#071525]"
+                className="inline-flex min-h-[46px] items-center justify-center gap-2 rounded-xl bg-[#0D9488] px-6 py-3 text-sm font-semibold text-white whitespace-nowrap shrink-0 transition-all duration-150 hover:bg-[#0F766E] hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0D9488] focus-visible:ring-offset-2 focus-visible:ring-offset-white"
               >
                 Hire Me
                 <ArrowRight className="h-4 w-4" aria-hidden="true" />
@@ -129,7 +129,7 @@ export function HeroSection() {
 
               <a
                 href="#portfolio"
-                className="inline-flex min-h-[46px] items-center justify-center rounded-xl border border-white/15 bg-[#102238]/70 px-6 py-3 text-sm font-semibold text-white whitespace-nowrap shrink-0 transition-all duration-150 hover:border-[#00D6C5]/50 hover:bg-[#102238] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#00D6C5]"
+                className="inline-flex min-h-[46px] items-center justify-center rounded-xl border border-slate-300 bg-white px-6 py-3 text-sm font-semibold text-[#071525] whitespace-nowrap shrink-0 transition-all duration-150 hover:border-[#0D9488]/60 hover:text-[#0F766E] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0D9488]"
               >
                 View My Portfolio
               </a>
@@ -150,7 +150,7 @@ export function HeroSection() {
               />
 
               {portraitUrl ? (
-                <div className="relative flex-1 overflow-hidden rounded-xl bg-[#071525]">
+                <div className="relative flex-1 overflow-hidden rounded-xl bg-slate-100">
                   <img
                     src={portraitUrl}
                     alt={`${PERSONAL_INFO.name} — ${PERSONAL_INFO.title}`}
@@ -159,26 +159,26 @@ export function HeroSection() {
                   />
                   <div
                     aria-hidden="true"
-                    className="pointer-events-none absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-[#071525]/90 via-[#071525]/35 to-transparent"
+                    className="pointer-events-none absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-[#071525]/80 via-[#071525]/30 to-transparent"
                   />
                   <div className="absolute inset-x-3 bottom-3 flex items-center justify-between gap-2">
-                    <span className="text-xs font-medium text-white/90">
+                    <span className="text-xs font-medium text-white">
                       {PERSONAL_INFO.name}
                     </span>
                     <div className="flex items-center gap-2">
                       <button
                         type="button"
                         onClick={() => fileInputRef.current?.click()}
-                        className="inline-flex items-center gap-1.5 rounded-lg border border-white/15 bg-[#071525]/80 px-2.5 py-1.5 text-xs font-medium text-white backdrop-blur-md transition-colors hover:border-[#00D6C5]/50 hover:text-[#00D6C5]"
+                        className="inline-flex items-center gap-1.5 rounded-lg border border-white/25 bg-white/90 px-2.5 py-1.5 text-xs font-medium text-[#071525] backdrop-blur-md transition-colors hover:bg-white"
                       >
-                        <ImagePlus className="h-3.5 w-3.5" aria-hidden="true" />
+                        <ImagePlus className="h-3.5 w-3.5 text-[#0F766E]" aria-hidden="true" />
                         Replace
                       </button>
                       <button
                         type="button"
                         onClick={handleResetPhoto}
                         aria-label="Remove portrait photo"
-                        className="inline-flex items-center justify-center rounded-lg border border-white/15 bg-[#071525]/80 p-1.5 text-[#B7C5D3] backdrop-blur-md transition-colors hover:border-white/30 hover:text-white"
+                        className="inline-flex items-center justify-center rounded-lg border border-white/25 bg-white/90 p-1.5 text-slate-700 backdrop-blur-md transition-colors hover:bg-white hover:text-[#071525]"
                       >
                         <RotateCcw className="h-3.5 w-3.5" aria-hidden="true" />
                       </button>
@@ -186,22 +186,22 @@ export function HeroSection() {
                   </div>
                 </div>
               ) : (
-                <div className="relative flex flex-1 flex-col items-center justify-between rounded-xl border border-dashed border-white/15 bg-gradient-to-b from-[#102238]/80 to-[#071525]/95 p-6 text-center">
-                  <div className="flex w-full items-center justify-between text-xs text-[#B7C5D3]">
+                <div className="relative flex flex-1 flex-col items-center justify-between rounded-xl border border-dashed border-slate-300 bg-gradient-to-b from-slate-50 to-white p-6 text-center">
+                  <div className="flex w-full items-center justify-between text-xs text-slate-500">
                     <span>Portrait Frame</span>
                     <span>{PERSONAL_INFO.location}</span>
                   </div>
 
                   <div className="my-6 flex flex-col items-center">
-                    <div className="flex h-28 w-28 items-center justify-center rounded-full border border-[#00D6C5]/35 bg-[#071525]/90 shadow-[0_0_40px_rgba(0,214,197,0.12)]">
-                      <span className="font-display text-3xl font-bold tracking-tight text-[#00D6C5]">
+                    <div className="flex h-28 w-28 items-center justify-center rounded-full border border-[#0D9488]/30 bg-teal-50/70 shadow-sm">
+                      <span className="font-display text-3xl font-bold tracking-tight text-[#0F766E]">
                         {PERSONAL_INFO.monogram}
                       </span>
                     </div>
-                    <p className="mt-5 font-display text-lg font-semibold text-white">
+                    <p className="mt-5 font-display text-lg font-semibold text-[#071525]">
                       {PERSONAL_INFO.name}
                     </p>
-                    <p className="mt-1 max-w-[26ch] text-xs leading-relaxed text-[#B7C5D3]">
+                    <p className="mt-1 max-w-[26ch] text-xs leading-relaxed text-slate-600">
                       Add your real profile photo here—never replaced with an AI avatar.
                     </p>
                   </div>
@@ -210,13 +210,13 @@ export function HeroSection() {
                     <button
                       type="button"
                       onClick={() => fileInputRef.current?.click()}
-                      className="inline-flex min-h-[42px] w-full items-center justify-center gap-2 rounded-xl border border-[#00D6C5]/40 bg-[#00D6C5]/10 px-4 py-2.5 text-sm font-medium text-[#00D6C5] transition-colors hover:bg-[#00D6C5]/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#00D6C5]"
+                      className="inline-flex min-h-[42px] w-full items-center justify-center gap-2 rounded-xl border border-[#0D9488]/35 bg-teal-50 px-4 py-2.5 text-sm font-medium text-[#0F766E] transition-colors hover:bg-teal-100/80 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0D9488]"
                     >
                       <ImagePlus className="h-4 w-4" aria-hidden="true" />
                       Upload Profile Photo
                     </button>
                     {uploadError && (
-                      <p role="alert" className="mt-2 text-xs text-rose-300">
+                      <p role="alert" className="mt-2 text-xs text-rose-600">
                         {uploadError}
                       </p>
                     )}
@@ -228,34 +228,34 @@ export function HeroSection() {
         </div>
 
         {/* Full-Width Key Information Strip Below Hero Split */}
-        <div className="mt-10 grid grid-cols-1 gap-4 rounded-2xl border border-white/[0.08] bg-[#102238]/60 p-5 backdrop-blur-md sm:grid-cols-2 lg:grid-cols-4 lg:gap-6">
+        <div className="mt-10 grid grid-cols-1 gap-4 rounded-2xl border border-slate-200 bg-white p-5 shadow-xs sm:grid-cols-2 lg:grid-cols-4 lg:gap-6">
           <div className="flex flex-col">
-            <span className="text-xs font-medium text-[#B7C5D3]">Experience</span>
-            <span className="mt-1 font-display text-lg font-semibold text-white tabular-nums">
+            <span className="text-xs font-medium text-slate-500">Experience</span>
+            <span className="mt-1 font-display text-lg font-semibold text-[#071525] tabular-nums">
               {PERSONAL_INFO.experience}
             </span>
           </div>
 
           <div className="flex flex-col">
-            <span className="text-xs font-medium text-[#B7C5D3]">Location</span>
-            <span className="mt-1 font-display text-lg font-semibold text-white">
+            <span className="text-xs font-medium text-slate-500">Location</span>
+            <span className="mt-1 font-display text-lg font-semibold text-[#071525]">
               {PERSONAL_INFO.location}
             </span>
           </div>
 
           <div className="flex flex-col">
-            <span className="text-xs font-medium text-[#B7C5D3]">Languages</span>
-            <span className="mt-1 font-display text-lg font-semibold text-white">
+            <span className="text-xs font-medium text-slate-500">Languages</span>
+            <span className="mt-1 font-display text-lg font-semibold text-[#071525]">
               {PERSONAL_INFO.languages}
             </span>
           </div>
 
           <div className="flex flex-col">
-            <span className="text-xs font-medium text-[#B7C5D3]">Email</span>
+            <span className="text-xs font-medium text-slate-500">Email</span>
             <div className="mt-1 flex items-center gap-2 min-w-0">
               <a
                 href={`mailto:${PERSONAL_INFO.email}`}
-                className="inline-flex items-center gap-1.5 truncate text-sm sm:text-base font-semibold text-[#00D6C5] transition-colors hover:text-[#1de6d6]"
+                className="inline-flex items-center gap-1.5 truncate text-sm sm:text-base font-semibold text-[#0F766E] transition-colors hover:text-[#0D9488]"
               >
                 <Mail className="h-4 w-4 shrink-0" aria-hidden="true" />
                 <span className="truncate">{PERSONAL_INFO.email}</span>
@@ -265,10 +265,10 @@ export function HeroSection() {
                 onClick={handleCopyEmail}
                 aria-label="Copy email address"
                 title="Copy email address"
-                className="inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-md border border-white/10 bg-[#071525]/70 text-[#B7C5D3] transition-colors hover:border-[#00D6C5]/40 hover:text-[#00D6C5]"
+                className="inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-md border border-slate-200 bg-slate-50 text-slate-600 transition-colors hover:border-[#0D9488]/50 hover:text-[#0F766E]"
               >
                 {copiedEmail ? (
-                  <Check className="h-3.5 w-3.5 text-[#00D6C5]" />
+                  <Check className="h-3.5 w-3.5 text-[#0F766E]" />
                 ) : (
                   <Copy className="h-3.5 w-3.5" />
                 )}

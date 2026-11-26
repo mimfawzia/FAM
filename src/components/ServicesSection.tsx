@@ -14,7 +14,7 @@ import {
 import {SERVICES, ServiceItem} from '../data/portfolioData';
 
 function ServiceIcon({name}: {name: ServiceItem['iconName']}) {
-  const cls = 'h-5 w-5 text-[#00D6C5]';
+  const cls = 'h-5 w-5 text-[#0F766E]';
   switch (name) {
     case 'Share2':
       return <Share2 className={cls} aria-hidden="true" />;
@@ -45,17 +45,17 @@ export function ServicesSection() {
   return (
     <section
       id="services"
-      className="border-b border-white/[0.06] bg-[#102238]/25 py-16 sm:py-24"
+      className="border-b border-slate-200/80 bg-slate-50/75 py-16 sm:py-24"
     >
       <div className="mx-auto max-w-[1200px] px-5 sm:px-8">
         <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
           <div className="max-w-2xl">
-            <p className="text-sm font-medium text-[#00D6C5]">What I Offer</p>
-            <h2 className="mt-2 font-display text-3xl sm:text-4xl font-bold tracking-tight text-white [text-wrap:balance]">
+            <p className="text-sm font-medium text-[#0F766E]">What I Offer</p>
+            <h2 className="mt-2 font-display text-3xl sm:text-4xl font-bold tracking-tight text-[#071525] [text-wrap:balance]">
               Digital Marketing &amp; Creative Services
             </h2>
           </div>
-          <p className="max-w-md text-sm leading-relaxed text-[#B7C5D3]">
+          <p className="max-w-md text-sm leading-relaxed text-slate-600">
             Focused execution across organic social growth, search optimization, paid media, and
             brand-aligned visual design.
           </p>
@@ -69,19 +69,19 @@ export function ServicesSection() {
             >
               <div>
                 <div className="flex items-center justify-between gap-4">
-                  <div className="flex h-11 w-11 items-center justify-center rounded-xl border border-[#00D6C5]/25 bg-[#00D6C5]/10 transition-colors duration-200 group-hover:border-[#00D6C5]/50 group-hover:bg-[#00D6C5]/15">
+                  <div className="flex h-11 w-11 items-center justify-center rounded-xl border border-[#0D9488]/25 bg-teal-50 transition-colors duration-200 group-hover:border-[#0D9488]/50 group-hover:bg-teal-100/70">
                     <ServiceIcon name={service.iconName} />
                   </div>
-                  <span className="font-display text-xs font-semibold tracking-wider text-[#B7C5D3]/70 tabular-nums">
+                  <span className="font-display text-xs font-semibold tracking-wider text-slate-400 tabular-nums">
                     {service.number}
                   </span>
                 </div>
 
-                <h3 className="mt-5 font-display text-lg font-semibold text-white transition-colors duration-150 group-hover:text-[#00D6C5]">
+                <h3 className="mt-5 font-display text-lg font-semibold text-[#071525] transition-colors duration-150 group-hover:text-[#0F766E]">
                   {service.title}
                 </h3>
 
-                <p className="mt-2.5 text-sm leading-relaxed text-[#B7C5D3]">
+                <p className="mt-2.5 text-sm leading-relaxed text-slate-600">
                   {service.description}
                 </p>
               </div>

@@ -28,7 +28,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-[#071525] text-white">
+    <div className="min-h-screen bg-white text-[#071525]">
       <Navbar />
       <main>
         <HeroSection />
